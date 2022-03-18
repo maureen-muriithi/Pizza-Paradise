@@ -11,98 +11,106 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-      </a>
-      <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
-
-        <li class="nav-item">
-          <a class="nav-link  bg-info text-white" href="#aboutUs">Welcome</a>
-        </li>
-    
-        <li class="nav-item">
-          <a class="nav-link  bg-info text-white" href="#contact">Contacts</a>
-        </li>
-      </ul>
-    </nav>
-    <h1 id="main-header"> Pizza Paradise</h1>
-    <h5 id="slogan">A Slice of Heaven!</h5>
-    <div class="container">
-      <div class="row">
-        <div class="column">
-          <img class="displayimages" src="images/pizza1.jpg" alt="Round pizza">
-        </div>
-        <div class="column">
-          <img  class="displayimages" src="images/pizza paradise.jpeg" alt="Paradise Pizza">
-        </div>
-        <div class="column">
-          <img  class="displayimages" src="images/pizza2.jpg" alt="Dressed pizza">
+    <div class="container-fluid">
+      <nav class="navbar">
+        <a class="navbar-brand" href="#">
+          <img id="pizza-icon" src="images/pizzaicon.png" width="48" height="48" alt="">
+        </a>
+        <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
+  
+          <li class="nav-item">
+            <a class="nav-link  bg-info text-white" href="#aboutUs">Welcome</a>
+          </li>
+      
+          <li class="nav-item">
+            <a class="nav-link  bg-info text-white" href="#contact">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 id="main-header"> Pizza <span> <img src="images/pizzaicon.png" alt="pizza icon" idth="100" height="100" > </span> Paradise</h1>
+      <h5 id="slogan">A Slice of Heaven!</h5>
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <img class="displayimages" src="images/pizza1.jpg" alt="Round pizza">
+          </div>
+          <div class="column">
+            <img  class="displayimages" src="images/pizza paradise.jpeg" alt="Paradise Pizza">
+          </div>
+          <div class="column">
+            <img  class="displayimages" src="images/pizza2.jpg" alt="Dressed pizza">
+          </div>
         </div>
       </div>
-    </div>
-    <div id="aboutUsContainer">
-      <h4 class="headers">In Crust we Trust</h4>
-      <p>
-        Pizza Paradise is not your average pizzeria.
-      </p>
-      <p>
-        The homemade pizza dough is produced in-house daily and is another reason why the pizza at Paradise Pizza always tastes better
-      </p>
-      <p>
-        We endeavour to serve you the finest coal fired brick pizza. You get to enjoy a choice of your favourite crust and toppings. 
-      </p>
-
-      <p>
-        You can crust with us, or enjoy prompt deliveries anywhere within Nairobi Town.
-      </p>
-      <p>Like any pizza-lover would say - Its all about the crust!-</p>
-    </div>
-
-    <div  class="container-fluid" id="products" >
-      <div class="row">
-        <div class="col-md-4 col-sm-12">
+      <div id="aboutUsContainer">
+        <h2 class="headers">In Crust We Trust</h2>
+        <p>
+          Pizza Paradise is not your average pizzeria.
+        </p>
+        <p>
+          The homemade pizza dough is produced in-house daily and is another reason why the pizza at Paradise Pizza always tastes better
+        </p>
+        <p>
+          We endeavour to serve you the finest coal fired brick pizza. You get to enjoy a choice of your favourite crust and toppings. 
+        </p>
   
-          <img class='first-option' align="middle" src="images/pizzasize.jpg" alt="Round Pizza">
-          <br>
-          <br>
-          <h3 class="first-option">Pizza</h3>
-          <br>
-          <p class="first-option">Enjoy your pizza as much as you would love to. Our pizza comes in variety of sizes. Pick a size that fits all!</p>
-          <select class="form-control size">
-            <option label="Small" value="800">Small</option>
-            <option label="Medium" value="1000">Medium</option>
-            <option label="Large" value="1200">Large</option>
-          </select>
-        </div>
-        <div class="col-md-4 col-sm-4">
-          <img class='second-option' align="middle" src="images/cheeseimg.jpg" alt="Cheese Pizza">
-          <br>
-          <br>
-          <h3 class="second-option">Toppings</h3>
-          <br>
-          <p class='second-option'> Enjoy your pizza they way you would love to. Paradise Pizza gives you several toppings, to add flavor to your pizza.</p>
-          <select class="form-control toppings">
-            <option label="Onions" value="50">Onions</option>
-            <option label="Cheese" value="100">Cheese</option>
-            <option label="Sausages" value="150">Sausages</option>
-          </select>
-        </div>
-        <div class="col-md-4 col-sm-4">
-          <img class='third-option' align="middle" src="images/crustimg.jpg" alt="Crust Pizza">
-          <br>
-          <br>
-          <h3 class="third-option">Crust</h3>
-          <br>
-          <p class='third-option'>Your crust your choice we are here to facilitate your pizza experience to the
-            next level. Try a different kind of crust today.</p>
+        <p>
+          You can crust with us, or enjoy prompt deliveries anywhere within Nairobi Town.
+        </p>
+        <p>Like any pizza-lover would say - Its all about the crust!-</p>
+      </div>
   
-          <select class="form-control crust">
-            <option label="Gluten-Free" value="500">Gluten-Free</option>
-            <option label="Stuffed" value="300">Stuffed</option>
-            <option label="Crispy" value="200">Crispy</option>
-          </select>
+      <div  class="container-fluid" id="products" >
+        <div class="row">
+          <div class="col-md-4" id="pizza">
+            <img class='first-option' id="firstImage" align="middle" src="images/pizzasize.jpg" alt="Round Pizza">
+            <br>
+            <br>
+            <h3 class="headers" class="first-option">Pizza</h3>
+            <br>
+            <p class="first-option" class="hiddeninfo" id="pizzaInfo">Enjoy your pizza as much as you would love to. Our pizza comes in variety of sizes. Pick a size that fits all. We've got you covered!</p>
+            <select class="form-control size" placeholder="Choose Size" >
+              <option selected>Choose size...</option>
+              <option label="Small" value="800">Small</option>
+              <option label="Medium" value="1000">Medium</option>
+              <option label="Large" value="1200">Large</option>
+            </select>
+          </div>
+          <div class="col-md-4" id="toppings"> 
+            <img class='second-option' id="secondImage align="middle" src="images/cheeseimg.jpg" alt="Cheese Pizza">
+            <br>
+            <br>
+            <h3 class="headers" class="second-option">Toppings</h3>
+            <br>
+            <p class='second-option' class="hiddeninfo" id="toppingsInfo" > Enjoy your pizza they way you would love to. Paradise Pizza gives you several toppings, to add flavor to your pizza.</p>
+            <select class="form-control toppings">
+              <option selected>Choose topping...</option>
+              <option label="Onions" value="50">Onions</option>
+              <option label="Cheese" value="100">Cheese</option>
+              <option label="Sausages" value="150">Sausages</option>
+            </select>
+          </div>
+          <div class="col-md-4" id="crust">
+            <img class='third-option' id="thirdImage align="middle" src="images/crustimg.jpg" alt="Crust Pizza">
+            <br>
+            <br>
+            <h3 class="headers" class="third-option">Crust</h3>
+            <br>
+            <p class='third-option' class="hiddeninfo" id="crustInfo" >Enjoy you pizza however you would love to. From the variety of crusts we offer, you can take your pizza to the next level of taste.</p>
+    
+            <select class="form-control crust">
+              <option selected>Choose crust...</option>
+              <option label="Gluten-Free" value="500">Gluten-Free</option>
+              <option label="Stuffed" value="300">Stuffed</option>
+              <option label="Crispy" value="200">Crispy</option>
+            </select>
+          </div>
         </div>
+        <br>
+        <div>
+          <button class="btn btn-info order" type="submit" width="100px" >Place your Order</button>
+        </div>
+  
       </div>
     </div>
 
@@ -113,6 +121,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
