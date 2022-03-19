@@ -8,26 +8,39 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <body>
+    <br>
+  <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
+
+    <li class="nav-item">
+      <a class="nav-link  bg-info text-white" href="#aboutUs">Welcome</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link  bg-info text-white" href="#contact">Contacts</a>
+    </li>
+  </ul>
+  <br>
     <div class="container-fluid">
-      <nav class="navbar">
+      <!-- <nav class="navbar">
         <a class="navbar-brand" href="#">
           <img id="pizza-icon" src="images/pizzaicon.png" width="48" height="48" alt="">
         </a>
         <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
-  
-          <li class="nav-item">
+   -->
+          <!-- <li class="nav-item">
             <a class="nav-link  bg-info text-white" href="#aboutUsContainer">Welcome</a>
           </li>
       
           <li class="nav-item">
             <a class="nav-link  bg-info text-white" href="#contact">Contacts</a>
           </li>
-        </ul>
-      </nav>
-      <h1 id="main-header">  Pizza Paradise  </h1>
+        </ul> -->
+      <!-- </nav> -->
+      <h1 id="main-header">  PIZZA PARADISE </h1>
       <h5 id="slogan">A Slice of Heaven! <span> <img src="images/pizzaicon.png" alt="pizza icon" idth="40" height="40" > </span> </h5>
       <div class="container">
         <div class="row">
@@ -62,7 +75,7 @@
   
       <div  class="container-fluid" id="products" >
         <div class="row">
-          <div class="col-md-4" id="pizza-size">
+          <div class="col-md-4">
             <img class='first-option' id="firstImage align="middle src="images/pizzasize.jpg" alt="Round Pizza">
             <br>
             <br>
@@ -70,13 +83,13 @@
             <br>
             <p class="first-option" class="hiddenInfo" id="pizzaInfo">Enjoy your pizza as much as you would love to. Our pizza comes in variety of sizes. Pick a size that fits all. We've got you covered!</p>
             <select class="form-control size" placeholder="Choose Size" >
-              <option selected>Choose size...</option>
+              <!-- <option selected>Choose size...</option> -->
               <option label="Small" value="800">Small</option>
               <option label="Medium" value="1000">Medium</option>
               <option label="Large" value="1200">Large</option>
             </select>
           </div>
-          <div class="col-md-4" id="toppings"> 
+          <div class="col-md-4"> 
             <img class='second-option' id="secondImage align="middle src="images/cheeseimg.jpg" alt="Cheese Pizza">
             <br>
             <br>
@@ -84,13 +97,13 @@
             <br>
             <p class='second-option' class="hiddenInfo" id="toppingsInfo" > Enjoy your pizza they way you would love to. Paradise Pizza gives you several toppings, to add flavor to your pizza.</p>
             <select class="form-control toppings">
-              <option selected>Choose topping...</option>
+              <!-- <option selected>Choose topping...</option> -->
               <option label="Onions" value="50">Onions</option>
               <option label="Cheese" value="100">Cheese</option>
               <option label="Sausages" value="150">Sausages</option>
             </select>
           </div>
-          <div class="col-md-4" id="crust">
+          <div class="col-md-4">
             <img class='third-option' id="thirdImage align="middle src="images/crustimg.jpg" alt="Crust Pizza">
             <br>
             <br>
@@ -99,7 +112,7 @@
             <p class='third-option' class="hiddenInfo" id="crustInfo" >Enjoy you pizza however you would love to. From the variety of crusts we offer, you can take your pizza to the next level of taste.</p>
     
             <select class="form-control crust">
-              <option selected>Choose crust...</option>
+              <!-- <option selected>Choose crust...</option> -->
               <option label="Gluten-Free" value="500">Gluten-Free</option>
               <option label="Stuffed" value="300">Stuffed</option>
               <option label="Crispy" value="200">Crispy</option>
@@ -135,14 +148,11 @@
         </tbody>
       </table>
       <br>
-      <div class="centered-text">
-        <button class="btn btn-info order" id="addButton" type="click" style="justify-items: center;" >Order more</button>
-      </div>
       <br>
       <div class="other-buttons">
         <div class="centered-text">
           <button class="btn btn-info add-pizza" type="submit">Order Another</button>
-          <div class="additional-info">
+          <div class="more-info">
             <h3>Your total is: <span></span></h3>
             <h5>Would you like us to deliver your order at a discounted cost of <em>200</em>?</h5>
             <h4> Thank you! We are working on it . Your order will be delivered to <span></span>.</h4>
@@ -152,8 +162,8 @@
             </div>
           </div>
           <br>
-          <button class="btn btn-info yes" type="submit">Yes</button>
-          <button class="btn btn-info no" type="submit">No</button>
+          <button id="yes-button" class="btn btn-info yes" type="submit">Yes</button>
+          <button id="no-button" class="btn btn-info no" type="submit">No</button>
         </div>
         <div class="text-right">
           <button class="btn btn-info check-out" type="submit">Checkout</button>
@@ -168,23 +178,24 @@
             <strong>Paradise Pizza </strong>  <br>
             The Junction Mall<br> 
             Dagoretti Corner - North. <br>
-            Nairobi, Kenya.
+            Nairobi, Kenya. <br>
+            <a href="mailto:moh2wanja@gmail.com">moh2wanja@gmail.com</a>
         </address>
-        <br><br>
+        <br>
         <address>
           <em>For more info/support:</em><br>
           <!-- icons -->
         </address>
       </div>
-        <footer class="centered-text" id="socialIcons">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-          <img src="images/social_icons/facebook.png" alt="facebook" />
-          <img src="images/social_icons/g_plus.png" alt="g_plus" />
-          <img src="images/social_icons/whatsapp.png" alt="whatsapp" />
-          <br />
-          <p id="finPart">ParadisePizza</p>
-          <p>2022</p>
-        </footer>
+      <footer id="socialIcons">
+        <img id="email-icon" src="images/emailicon.png" alt="email" /><a href="mailto:moh2wanja@gmail.com"></a>
+        <img src="images/twitter.png" alt="twitter" />
+        <img src="images/facebook.png" alt="facebook" />
+        <img src="images/g_plus.png" alt="g_plus" />
+        <br/> <br>
+        <p id="finPart">PARADISE PIZZA</p>
+        <p>2022</p>
+      </footer>
     </div>
 
   
