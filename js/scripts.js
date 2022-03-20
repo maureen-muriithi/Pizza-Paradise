@@ -43,19 +43,16 @@ $ (document).ready(function(){
 
     // define and validate the order button
     $("#orderButton").click(function(e){
-        e.preventDefault();
+        // e.preventDefault();
         console.log("Submitted")
         var sizeOfPizza = $(".size option:selected").val();
         var toppingsOfPizza = $(".toppings option:selected").val();
         var crustOfPizza = $(".crust option:selected").val();
-        console.log("My pizza should be ", sizeOfPizza, "," , crustOfPizza, "and with", toppingsOfPizza)
 
         orderNumber = orderNumber + 1
         let pizza = new Pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, orderNumber);
         pizza.calculatePrice();
         grandTotal = grandTotal + pizza.total;
-        console.log('pizza', pizza.total)
-        let order = 1;
 
         $(".table").show();
         $(".other-buttons").show();
@@ -116,7 +113,7 @@ $ (document).ready(function(){
             $(".more-info #feedback").show();
           });
       
-        // For delivery user inputs location then completes order
+        // For delivery, user inputs location then completes order
         $(".btn.complete").click(function() {
             var location = $(".more-info .location input").val();
             $(".more-info h4").show();
