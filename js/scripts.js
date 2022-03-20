@@ -1,5 +1,5 @@
 $ (document).ready(function(){
-    // toggle function on the 'What we do" section, to display description; 
+    
     let orderNumber = 0;
     let grandTotal = 0;
     function Pizza(size, toppings, crust, orderNo) {
@@ -15,6 +15,7 @@ $ (document).ready(function(){
     Pizza.prototype.calculatePrice = function(){
         this.total = parseInt(this.size) + parseInt(this.toppings) + parseInt(this.crust);
     }
+    // toggle function on the 'What we do" section, to display description; 
     $("#pizzaInfo, #toppingsInfo, #crustInfo").hide();
 
     $(".first-option").click(function(){
@@ -49,7 +50,6 @@ $ (document).ready(function(){
         var crustOfPizza = $(".crust option:selected").val();
         console.log("My pizza should be ", sizeOfPizza, "," , crustOfPizza, "and with", toppingsOfPizza)
 
-        // let total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
         orderNumber = orderNumber + 1
         let pizza = new Pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, orderNumber);
         pizza.calculatePrice();
@@ -72,24 +72,17 @@ $ (document).ready(function(){
             var sizeOfPizza = $(".size option:selected").val();
             var toppingsOfPizza = $(".toppings option:selected").val();
             var crustOfPizza = $(".crust option:selected").val();
-            // var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
-            // order = order + 1;
-            // grandTotal = grandTotal + total;
-            console.log('grandtotal', Pizza.grandTotal)
 
-      
             // Create new rows for additional orders
             orderNumber = orderNumber + 1
             var newPizza = new Pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, orderNumber);
             newPizza.calculatePrice();
-            console.log('newPizza total', newPizza.total);
-            console.log('grandtotal', newPizza.grandTotal)
             grandTotal = grandTotal + newPizza.total;
       
             var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size">' + $(".size option:selected").text() + " - " + newPizza.size + '</td><td id="toppings">' + $(".toppings option:selected").text() + " - " + newPizza.toppings + '</td><td id="crust">' + $(".crust option:selected").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
       
             $("#pizza").append(newRow);
-            });
+          });
         
         // Hide and show elements for user to request delivery
         $(".btn.check-out").click(function() {
@@ -100,7 +93,6 @@ $ (document).ready(function(){
             $("#no-button").show();
             $(".more-info .location").hide();
             $(".more-info #feedback").hide();
-            // grandTotal = grandTotal + total;
       
             $(".more-info h3 span").html(grandTotal);
           });
