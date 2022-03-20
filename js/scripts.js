@@ -43,7 +43,7 @@ $ (document).ready(function(){
 
     // define and validate the order button
     $("#orderButton").click(function(e){
-        // e.preventDefault();
+        // e.preventDefault()
         console.log("Submitted")
         var sizeOfPizza = $(".size option:selected").val();
         var toppingsOfPizza = $(".toppings option:selected").val();
