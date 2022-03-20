@@ -12,34 +12,21 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <body>
+    <br><br>
+    <ul class="nav nav-pills justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutUsContainer">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contacts</a>
+      </li>
+    </ul>
     <br>
-  <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
-
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="#aboutUs">Welcome</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="#contact">Contacts</a>
-    </li>
-  </ul>
-  <br>
+    
     <div class="container-fluid">
-      <!-- <nav class="navbar">
-        <a class="navbar-brand" href="#">
-          <img id="pizza-icon" src="images/pizzaicon.png" width="48" height="48" alt="">
-        </a>
-        <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
-   -->
-          <!-- <li class="nav-item">
-            <a class="nav-link  bg-info text-white" href="#aboutUsContainer">Welcome</a>
-          </li>
-      
-          <li class="nav-item">
-            <a class="nav-link  bg-info text-white" href="#contact">Contacts</a>
-          </li>
-        </ul> -->
-      <!-- </nav> -->
       <h1 id="main-header">  PIZZA PARADISE </h1>
       <h5 id="slogan">A Slice of Heaven! <span> <img src="images/pizzaicon.png" alt="pizza icon" idth="40" height="40" > </span> </h5>
       <div class="container">
@@ -55,8 +42,10 @@
           </div>
         </div>
       </div>
+      <br>
       <div id="aboutUsContainer">
-        <h2 class="headers">In Crust We Trust</h2>
+        <h2 id="about-header" class="headers">In Crust We Trust</h2>
+        <br>
         <p>
           Pizza Paradise is not your average pizzeria.
         </p>
@@ -154,8 +143,9 @@
           <button class="btn btn-info add-pizza" type="submit">Order Another</button>
           <div class="more-info">
             <h3>Your total is: <span></span></h3>
+            <p id="feedback" >Thank you for trusting  <strong> Paradise Pizza! </strong> <br> We value our customers.</p>
             <h5>Would you like us to deliver your order at a discounted cost of <em>200</em>?</h5>
-            <h4> Thank you! We are working on it . Your order will be delivered to <span></span>.</h4>
+            <h4 id="feedback2"> Thank you for trusting Paradise Pizza! <br> We value our customers. <br> Your order will be delivered to <span></span>.</h4>
             <div class="location text-center">
               <input type="text" size="50" placeholder="Where would you like us to deliver your order?" required />
               <button class="btn btn-info complete" type="submit">Complete</button>
