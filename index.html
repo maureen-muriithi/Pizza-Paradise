@@ -1,18 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Pizza Pardise</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <!-- Bootstrap CSS/ FontAwesome CSS/ Customised CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
   </head>
   <body>
-    <br><br>
+    <!-- Add nav items for easy navigation -->
+    <br /><br />
     <ul class="nav nav-pills justify-content-end">
       <li class="nav-item">
         <a class="nav-link active" href="#">Home</a>
@@ -24,67 +38,114 @@
         <a class="nav-link" href="#contact">Contacts</a>
       </li>
     </ul>
-    <br>
-    
+    <br />
+
+    <!-- Heading and Slogan -->
     <div class="container-fluid">
-      <h1 id="main-header">  PIZZA PARADISE </h1>
-      <h5 id="slogan">A Slice of Heaven! <span> <img src="images/pizzaicon.png" alt="pizza icon" idth="40" height="40" > </span> </h5>
+      <h1 id="main-header">PIZZA PARADISE</h1>
+      <h5 id="slogan">
+        A Slice of Heaven!
+        <span>
+          <img
+            src="images/pizzaicon.png"
+            alt="pizza icon"
+            idth="40"
+            height="40"
+          />
+        </span>
+      </h5>
+
+      <!-- Sample Pizza Images aligned -->
       <div class="container">
         <div class="row">
           <div class="column">
-            <img class="displayimages" src="images/pizza1.jpg" alt="Round pizza">
+            <img
+              class="displayimages"
+              src="images/pizza1.jpg"
+              alt="Round pizza"
+            />
           </div>
           <div class="column">
-            <img  class="displayimages" src="images/pizza paradise.jpeg" alt="Paradise Pizza">
+            <img
+              class="displayimages"
+              src="images/pizza paradise.jpeg"
+              alt="Paradise Pizza"
+            />
           </div>
           <div class="column">
-            <img  class="displayimages" src="images/pizza2.jpg" alt="Dressed pizza">
+            <img
+              class="displayimages"
+              src="images/pizza2.jpg"
+              alt="Dressed pizza"
+            />
           </div>
         </div>
       </div>
-      <br>
+      <br />
+
+      <!-- About the pizzeria shop -->
       <div id="aboutUsContainer">
         <h2 id="about-header" class="headers">In Crust We Trust</h2>
-        <br>
+        <br />
+        <p>Pizza Paradise is not your average pizzeria.</p>
         <p>
-          Pizza Paradise is not your average pizzeria.
+          The homemade pizza dough is produced in-house daily and is another
+          reason why the pizza at Paradise Pizza always tastes better
         </p>
         <p>
-          The homemade pizza dough is produced in-house daily and is another reason why the pizza at Paradise Pizza always tastes better
+          We endeavour to serve you the finest coal fired brick pizza. You get
+          to enjoy a choice of your favourite crust and toppings.
         </p>
         <p>
-          We endeavour to serve you the finest coal fired brick pizza. You get to enjoy a choice of your favourite crust and toppings. 
-        </p>
-  
-        <p>
-          You can crust with us, or enjoy prompt deliveries anywhere within Nairobi Town.
+          You can crust with us, or enjoy prompt deliveries anywhere within
+          Nairobi Town.
         </p>
         <p>Like any pizza-lover would say - Its all about the crust!-</p>
       </div>
-  
-      <div  class="container-fluid" id="products" >
+
+      <!--Prices and Selections for size, toppings and crust, with hidden information on image toggle -->
+      <div class="container-fluid" id="products">
         <div class="row">
           <div class="col-md-4">
-            <img class='first-option' id="firstImage align="middle src="images/pizzasize.jpg" alt="Round Pizza">
-            <br>
-            <br>
+            <img
+              class="first-option"
+              id="firstImage align="
+              middle
+              src="images/pizzasize.jpg"
+              alt="Round Pizza"
+            />
+            <br />
+            <br />
             <h3 class="headers" class="first-option">Pizza</h3>
-            <br>
-            <p class="first-option" class="hiddenInfo" id="pizzaInfo">Enjoy your pizza as much as you would love to. Our pizza comes in variety of sizes. Pick a size that fits all. We've got you covered!</p>
-            <select class="form-control size" placeholder="Choose Size" >
+            <br />
+            <p class="first-option" class="hiddenInfo" id="pizzaInfo">
+              Enjoy your pizza as much as you would love to. Our pizza comes in
+              variety of sizes. Pick a size that fits all. We've got you
+              covered!
+            </p>
+            <select class="form-control size" placeholder="Choose Size">
               <!-- <option selected>Choose size...</option> -->
               <option label="Small" value="800">Small</option>
               <option label="Medium" value="1000">Medium</option>
               <option label="Large" value="1200">Large</option>
             </select>
           </div>
-          <div class="col-md-4"> 
-            <img class='second-option' id="secondImage align="middle src="images/cheeseimg.jpg" alt="Cheese Pizza">
-            <br>
-            <br>
+          <div class="col-md-4">
+            <img
+              class="second-option"
+              id="secondImage align="
+              middle
+              src="images/cheeseimg.jpg"
+              alt="Cheese Pizza"
+            />
+            <br />
+            <br />
             <h3 class="headers" class="second-option">Toppings</h3>
-            <br>
-            <p class='second-option' class="hiddenInfo" id="toppingsInfo" > Enjoy your pizza they way you would love to. Paradise Pizza gives you several toppings, to add flavor to your pizza.</p>
+            <br />
+            <p class="second-option" class="hiddenInfo" id="toppingsInfo">
+              Enjoy your pizza they way you would love to. Paradise Pizza gives
+              you several toppings, to add flavor to your pizza.
+            </p>
             <select class="form-control toppings">
               <!-- <option selected>Choose topping...</option> -->
               <option label="Onions" value="50">Onions</option>
@@ -93,13 +154,23 @@
             </select>
           </div>
           <div class="col-md-4">
-            <img class='third-option' id="thirdImage align="middle src="images/crustimg.jpg" alt="Crust Pizza">
-            <br>
-            <br>
+            <img
+              class="third-option"
+              id="thirdImage align="
+              middle
+              src="images/crustimg.jpg"
+              alt="Crust Pizza"
+            />
+            <br />
+            <br />
             <h3 class="headers" class="third-option">Crust</h3>
-            <br>
-            <p class='third-option' class="hiddenInfo" id="crustInfo" >Enjoy you pizza however you would love to. From the variety of crusts we offer, you can take your pizza to the next level of taste.</p>
-    
+            <br />
+            <p class="third-option" class="hiddenInfo" id="crustInfo">
+              Enjoy you pizza however you would love to. From the variety of
+              crusts we offer, you can take your pizza to the next level of
+              taste.
+            </p>
+
             <select class="form-control crust">
               <!-- <option selected>Choose crust...</option> -->
               <option label="Gluten-Free" value="500">Gluten-Free</option>
@@ -108,14 +179,23 @@
             </select>
           </div>
         </div>
-        <br>
-        <br>
+        <br />
+        <br />
         <div>
-          <button class="btn btn-info order" id="orderButton" type="submit" width="100px" >Place your Order</button>
+          <button
+            class="btn btn-info order"
+            id="orderButton"
+            type="submit"
+            width="100px"
+          >
+            Place your Order
+          </button>
         </div>
       </div>
-      <br>
-      <br>
+      <br />
+      <br />
+
+      <!-- A table to display ordered items -->
       <table class="table">
         <thead>
           <tr>
@@ -136,68 +216,105 @@
           </tr>
         </tbody>
       </table>
-      <br>
-      <br>
+      <br />
+      <br />
+
+      <!-- Several buttons to prompt total cost display, delivery and feedback. -->
       <div class="other-buttons">
         <div class="centered-text">
-          <button class="btn btn-info add-pizza" type="submit">Order Another</button>
+          <button class="btn btn-info add-pizza" type="submit">
+            Order Another
+          </button>
           <div class="more-info">
             <h3>Your total is: <span></span></h3>
-            <p id="feedback" >Thank you for trusting  <strong> Paradise Pizza! </strong> <br> We value our customers.</p>
-            <h5>Would you like us to deliver your order at a discounted cost of <em>200</em>?</h5>
-            <h4 id="feedback2"> Thank you for trusting Paradise Pizza! <br> We value our customers. <br> Your order will be delivered to <span></span>.</h4>
+            <p id="feedback">
+              Thank you for trusting <strong> Paradise Pizza! </strong> <br />
+              We value our customers.
+            </p>
+            <h5>
+              Would you like us to deliver your order at a discounted cost of
+              <em>200</em>?
+            </h5>
+            <h4 id="feedback2">
+              Thank you for trusting Paradise Pizza! <br />
+              We value our customers. <br />
+              Your order will be delivered to <span></span>.
+            </h4>
             <div class="location text-center">
-              <input type="text" size="50" placeholder="Where would you like us to deliver your order?" required />
-              <button class="btn btn-info complete" type="submit">Complete</button>
+              <input
+                type="text"
+                size="50"
+                placeholder="Where would you like us to deliver your order?"
+                required
+              />
+              <button class="btn btn-info complete" type="submit">
+                Complete
+              </button>
             </div>
           </div>
-          <br>
-          <button id="yes-button" class="btn btn-info yes" type="submit">Yes</button>
-          <button id="no-button" class="btn btn-info no" type="submit">No</button>
+          <br />
+          <button id="yes-button" class="btn btn-info yes" type="submit">
+            Yes
+          </button>
+          <button id="no-button" class="btn btn-info no" type="submit">
+            No
+          </button>
         </div>
         <div class="text-right">
           <button class="btn btn-info check-out" type="submit">Checkout</button>
         </div>
       </div>
-      <br>
-      <br>
+      <br />
+      <br />
+
       <!-- Address and contact information -->
       <div class="centered-text">
         <address id="contact">
-          <em> Where to find us: </em> <br>
-            <strong>Paradise Pizza </strong>  <br>
-            The Junction Mall<br> 
-            Dagoretti Corner - North. <br>
-            Nairobi, Kenya. <br>
-            <a href="mailto:moh2wanja@gmail.com">moh2wanja@gmail.com</a>
+          <em> Where to find us: </em> <br />
+          <strong>Paradise Pizza </strong> <br />
+          The Junction Mall<br />
+          Dagoretti Corner - North. <br />
+          Nairobi, Kenya. <br />
+          <a href="mailto:moh2wanja@gmail.com">moh2wanja@gmail.com</a>
         </address>
-        <br>
+        <br />
+
+        <!-- Social Media Icons  and footer. -->
         <address>
-          <em>For more info/support:</em><br>
-          <!-- icons -->
+          <em>For more info/support:</em><br />
         </address>
       </div>
       <footer id="socialIcons">
-        <img id="email-icon" src="images/emailicon.png" alt="email" /><a href="mailto:moh2wanja@gmail.com"></a>
+        <img id="email-icon" src="images/emailicon.png" alt="email" /><a
+          href="mailto:moh2wanja@gmail.com"
+        ></a>
         <img src="images/twitter.png" alt="twitter" />
         <img src="images/facebook.png" alt="facebook" />
         <img src="images/g_plus.png" alt="g_plus" />
-        <br/> <br>
+        <br />
+        <br />
         <p id="finPart">PARADISE PIZZA</p>
         <p>2022</p>
       </footer>
     </div>
 
-  
-    
-
-   
-      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="js/scripts.js"></script>
   </body>
