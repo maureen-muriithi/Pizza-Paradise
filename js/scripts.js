@@ -1,5 +1,20 @@
 $ (document).ready(function(){
-    // toggle function on the 'What we do" section, to display description
+    // toggle function on the 'What we do" section, to display description; 
+    let orderNumber = 0;
+    let grandTotal = 0;
+    function Pizza(size, toppings, crust, orderNo) {
+        this.orderNo = orderNo;
+        this.size = size;
+        this.toppings = toppings;
+        this.crust = crust;
+        this.total = 0;
+    }
+
+    Pizza.prototype.orderNo = 0;
+    
+    Pizza.prototype.calculatePrice = function(){
+        this.total = parseInt(this.size) + parseInt(this.toppings) + parseInt(this.crust);
+    }
     $("#pizzaInfo, #toppingsInfo, #crustInfo").hide();
 
     $(".first-option").click(function(){
@@ -29,14 +44,18 @@ $ (document).ready(function(){
     $("#orderButton").click(function(e){
         e.preventDefault();
         console.log("Submitted")
-        let sizeOfPizza = $("#pizza-size").find(":selected").val();
-        let toppingsOfPizza = $("#toppings").find(":selected").val();
-        let crustOfPizza = $("#crust").find(":selected").val();
+        var sizeOfPizza = $(".size option:selected").val();
+        var toppingsOfPizza = $(".toppings option:selected").val();
+        var crustOfPizza = $(".crust option:selected").val();
         console.log("My pizza should be ", sizeOfPizza, "," , crustOfPizza, "and with", toppingsOfPizza)
 
-        let total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
+        // let total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
+        orderNumber = orderNumber + 1
+        let pizza = new Pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, orderNumber);
+        pizza.calculatePrice();
+        grandTotal = grandTotal + pizza.total;
+        console.log('pizza', pizza.total)
         let order = 1;
-        let grandTotal = 0;
 
         $(".table").show();
         $(".other-buttons").show();
@@ -46,30 +65,26 @@ $ (document).ready(function(){
         $("#size").html($(".size option:selected").text() + " - " + sizeOfPizza);
         $("#toppings").html($(".toppings option:selected").text() + " - " + toppingsOfPizza);
         $("#crust").html($(".crust option:selected").text() + " - " + crustOfPizza);
-        $("#total").html(total);
-
-        function Pizza(size, toppings, crust, total, orderNo) {
-        this.size = size;
-        this.toppings = toppings;
-        this.crust = crust;
-        this.total = total;
-        this.orderNo = orderNo;
-    }
-        // Pizza.prototype.calculatePrice = function(){
-
-        // }
+        $("#total").html(pizza.total);
 
         // Enable additional orders
         $('.btn.add-pizza').click(function() {
             var sizeOfPizza = $(".size option:selected").val();
             var toppingsOfPizza = $(".toppings option:selected").val();
             var crustOfPizza = $(".crust option:selected").val();
-            var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
-            order = order + 1;
-            grandTotal = grandTotal + total;
+            // var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
+            // order = order + 1;
+            // grandTotal = grandTotal + total;
+            console.log('grandtotal', Pizza.grandTotal)
+
       
             // Create new rows for additional orders
-            var newPizza = new Pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, total, order);
+            orderNumber = orderNumber + 1
+            var newPizza = new Pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, orderNumber);
+            newPizza.calculatePrice();
+            console.log('newPizza total', newPizza.total);
+            console.log('grandtotal', newPizza.grandTotal)
+            grandTotal = grandTotal + newPizza.total;
       
             var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size">' + $(".size option:selected").text() + " - " + newPizza.size + '</td><td id="toppings">' + $(".toppings option:selected").text() + " - " + newPizza.toppings + '</td><td id="crust">' + $(".crust option:selected").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
       
@@ -85,7 +100,7 @@ $ (document).ready(function(){
             $("#no-button").show();
             $(".more-info .location").hide();
             $(".more-info #feedback").hide();
-            grandTotal = grandTotal + total;
+            // grandTotal = grandTotal + total;
       
             $(".more-info h3 span").html(grandTotal);
           });
