@@ -4,11 +4,13 @@
 
 body {
   margin: auto, 0;
+  color: #4b371c;
+  
 }
 
 .container-fluid {
   width: 1280px;
-  padding: 10px solid #f57c00;
+  
 }
 
 #main-header {
@@ -19,10 +21,6 @@ body {
   color: #f57c00;
 }
 
-.navbar {
-  background-color: #f57c00;
-}
-
 .pizza-icon {
   width: 30;
   height: 30;
@@ -31,8 +29,9 @@ body {
 #slogan {
   text-align: center;
   font-family: "fangsong", cursive;
-  font-weight: 600;
-  font-size: xx-large;
+  font-weight: 900;
+  font-size: 40px;
+  color: #80471c;
   padding-bottom: 20px;
 }
 
@@ -61,6 +60,10 @@ body {
 .headers {
   color: #f57c00;
   font-weight: 900;
+  font-size: xx-large;
+}
+#about-header{
+  font-size: 40px;
 }
 
 #products {
@@ -112,6 +115,13 @@ body {
 #email-icon {
   width: 50px;
   height: 50px;
+}
+
+#feedback, #feedback2 {
+  color: #f57c00;
+  font-family: "pacifico", cursive;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 600px) {
