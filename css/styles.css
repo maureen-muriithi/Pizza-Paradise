@@ -131,6 +131,10 @@ body {
   color: white;
 }
 
+#address {
+  color: gray;
+}
+
 
 @media only screen and (max-width: 600px) {
   .container-fluid {

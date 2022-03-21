@@ -123,8 +123,10 @@
               variety of sizes. Pick a size that fits all. We've got you
               covered!
             </p>
-            <select class="form-control size">
-              <option selected label="Choose size..." value="0" disabled >Choose size...</option>
+            <select class="form-control size" id="option1">
+              <option selected label="Choose size..." value="0" disabled>
+                Choose size...
+              </option>
               <option label="Small" value="800">Small</option>
               <option label="Medium" value="1000">Medium</option>
               <option label="Large" value="1200">Large</option>
@@ -146,7 +148,7 @@
               Enjoy your pizza they way you would love to. Paradise Pizza gives
               you several toppings, to add flavor to your pizza.
             </p>
-            <select class="form-control toppings">
+            <select class="form-control toppings" id="option2">
               <option selected label="Choose topping.." value="0" disabled>
                 Choose topping...
               </option>
@@ -173,8 +175,10 @@
               taste.
             </p>
 
-            <select class="form-control crust">
-              <option selected label="Choose crust..." value="0" disabled>Choose crust...</option>
+            <select class="form-control crust" id="option3" >
+              <option class="my_select option" selected label="Choose crust..." value="0" disabled>
+                Choose crust...
+              </option>
               <option label="Gluten-Free" value="500">Gluten-Free</option>
               <option label="Stuffed" value="300">Stuffed</option>
               <option label="Crispy" value="200">Crispy</option>
@@ -263,7 +267,9 @@
           </button>
         </div>
         <div class="text-right">
-          <button class="btn btn-light:white check-out" type="submit">Checkout</button>
+          <button class="btn btn-light:white check-out" type="submit">
+            Checkout
+          </button>
         </div>
       </div>
       <br />
@@ -282,7 +288,7 @@
         <br />
 
         <!-- Social Media Icons  and footer. -->
-        <address><em>For more info/support:</em><br /></address>
+        <address id="address"><em>For more info/support:</em><br /></address>
       </div>
       <footer id="socialIcons">
         <img id="email-icon" src="images/emailicon.png" alt="email" /><a
@@ -298,7 +304,6 @@
       </footer>
     </div>
 
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

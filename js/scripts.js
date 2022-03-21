@@ -54,6 +54,7 @@ $ (document).ready(function(){
         pizza.calculatePrice();
         grandTotal = grandTotal + pizza.total;
 
+        // Alert user if there is no input on order
         if (sizeOfPizza==0 || toppingsOfPizza==0 || crustOfPizza==0){
             alert("Please choose your desired preferences to order your pizza.")
             return;
@@ -69,6 +70,11 @@ $ (document).ready(function(){
         $("#crust").html($(".crust option:selected").text() + " - " + crustOfPizza);
         $("#total").html(pizza.total);
 
+        $('select').each( function() {
+            $(this).val( $(this).find("option[selected]").val() );
+
+        });
+
         // Enable additional orders
         $('.btn.add-pizza').click(function() {
             var sizeOfPizza = $(".size option:selected").val();
@@ -80,12 +86,22 @@ $ (document).ready(function(){
             var newPizza = new Pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, orderNumber);
             newPizza.calculatePrice();
             grandTotal = grandTotal + newPizza.total;
-      
+
+            // Alert user if there is no input when adding another order
+            if (sizeOfPizza==0 || toppingsOfPizza==0 || crustOfPizza==0){
+                alert("Please choose your desired preferences to order your pizza.")
+                return;
+            }
+
             var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size">' + $(".size option:selected").text() + " - " + newPizza.size + '</td><td id="toppings">' + $(".toppings option:selected").text() + " - " + newPizza.toppings + '</td><td id="crust">' + $(".crust option:selected").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
-      
             $("#pizza").append(newRow);
+
+            // Return the choice input back to default
+            $('select').each( function() {
+                $(this).val( $(this).find("option[selected]").val() );
+            });
           });
-        
+
         // Hide and show elements for user to request delivery
         $(".btn.check-out").click(function() {
             $(".btn.add-pizza").hide();
@@ -129,7 +145,7 @@ $ (document).ready(function(){
             $(".more-info .location").hide();
             $(".more-info h4 span").html(location);
 
-        });
+         });
       
     });
       
