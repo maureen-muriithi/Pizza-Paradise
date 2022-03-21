@@ -123,8 +123,8 @@
               variety of sizes. Pick a size that fits all. We've got you
               covered!
             </p>
-            <select class="form-control size" placeholder="Choose Size">
-              <option selected label="Choose size..." value="0" >Choose size...</option>
+            <select class="form-control size">
+              <option selected label="Choose size..." value="0" disabled >Choose size...</option>
               <option label="Small" value="800">Small</option>
               <option label="Medium" value="1000">Medium</option>
               <option label="Large" value="1200">Large</option>
@@ -147,7 +147,7 @@
               you several toppings, to add flavor to your pizza.
             </p>
             <select class="form-control toppings">
-              <option selected label="Choose topping.." value="0">
+              <option selected label="Choose topping.." value="0" disabled>
                 Choose topping...
               </option>
               <option label="Onions" value="50">Onions</option>
@@ -174,7 +174,7 @@
             </p>
 
             <select class="form-control crust">
-              <option selected label="Choose crust..." value="0" >Choose crust...</option>
+              <option selected label="Choose crust..." value="0" disabled>Choose crust...</option>
               <option label="Gluten-Free" value="500">Gluten-Free</option>
               <option label="Stuffed" value="300">Stuffed</option>
               <option label="Crispy" value="200">Crispy</option>
@@ -185,7 +185,7 @@
         <br />
         <div>
           <button
-            class="btn btn-info order"
+            class="btn btn-light:white order"
             id="orderButton"
             type="submit"
             width="100px"
@@ -224,7 +224,7 @@
       <!-- Several buttons to prompt total cost display, delivery and feedback. -->
       <div class="other-buttons">
         <div class="centered-text">
-          <button class="btn btn-info add-pizza" type="submit">
+          <button class="btn btn-light:white add-pizza" type="submit">
             Order Another
           </button>
           <div class="more-info">
@@ -235,7 +235,7 @@
             </p>
             <h5>
               Would you like us to deliver your order at a discounted cost of
-              <em>200</em>?
+              <em>250</em>?
             </h5>
             <h4 id="feedback2">
               Thank you for trusting Paradise Pizza! <br />
@@ -249,21 +249,21 @@
                 placeholder="Where would you like us to deliver your order?"
                 required
               />
-              <button class="btn btn-info complete" type="submit">
+              <button class="btn btn-light:white complete" type="submit">
                 Complete
               </button>
             </div>
           </div>
           <br />
-          <button id="yes-button" class="btn btn-info yes" type="submit">
+          <button id="yes-button" class="btn btn-light:white yes" type="submit">
             Yes
           </button>
-          <button id="no-button" class="btn btn-info no" type="submit">
+          <button id="no-button" class="btn btn-light:white no" type="submit">
             No
           </button>
         </div>
         <div class="text-right">
-          <button class="btn btn-info check-out" type="submit">Checkout</button>
+          <button class="btn btn-light:white check-out" type="submit">Checkout</button>
         </div>
       </div>
       <br />
