@@ -1,7 +1,7 @@
 ### Pizza Paradise
 
 > A website for a pizzeria shop, Pizza Paradise.
-> Live demo [ ]
+> Live demo [ https://maureen-muriithi.github.io/Pizza-Paradise/ ]
 
 ### Project Contributor
 
