@@ -54,6 +54,11 @@ $ (document).ready(function(){
         pizza.calculatePrice();
         grandTotal = grandTotal + pizza.total;
 
+        if (sizeOfPizza==0 || toppingsOfPizza==0 || crustOfPizza==0){
+            alert("Please choose your desired preferences to order your pizza.")
+            return;
+        }
+
         $(".table").show();
         $(".other-buttons").show();
         $("#orderButton").hide();
@@ -94,14 +99,14 @@ $ (document).ready(function(){
             $(".more-info h3 span").html(grandTotal);
           });
           
-        // If delivery is needed, add 200(discounted delivery fee) to the grandtotal  
+        // If delivery is needed, add 250(discounted delivery fee) to the grandtotal  
         $("#yes-button").click(function() {
             $(".more-info h5").hide();
             $("#yes-button").hide();
             $("#no-button").hide();
             $(".more-info #feedback").hide();
             $(".more-info .location").show();
-            $(".more-info h3 span").html(grandTotal + 200);
+            $(".more-info h3 span").html(grandTotal + 250);
           });
           
         // If delivery is not needed, just display the grandtotal
@@ -116,9 +121,14 @@ $ (document).ready(function(){
         // For delivery, user inputs location then completes order
         $(".btn.complete").click(function() {
             var location = $(".more-info .location input").val();
+            if (location==""){
+                alert("Please enter your location.")
+                return;
+            }
             $(".more-info h4").show();
             $(".more-info .location").hide();
             $(".more-info h4 span").html(location);
+
         });
       
     });
