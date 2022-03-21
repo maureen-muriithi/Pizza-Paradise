@@ -5,11 +5,13 @@
 body {
   margin: auto, 0;
   color: #4b371c;
+  background-color: whitesmoke;
   
 }
 
 .container-fluid {
   width: 1280px;
+  background-color: wheat;
   
 }
 
